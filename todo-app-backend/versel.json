@@ -15,10 +15,6 @@
         "dest": "app.js"
       },
       {
-        "src": "/todos/(.*)",
-        "dest": "app.js"
-      },
-      {
         "src": "/",
         "dest": "build/index.html"
       },
