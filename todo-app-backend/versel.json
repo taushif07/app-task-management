@@ -1,24 +1,24 @@
 {
-    "builds": [
-      {
-        "src": "index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "build/**",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      { "src": "/api/todos", "dest": "index.js" },
-      { "src": "/api/*", "dest": "index.js" },
-      { "src": "/(.*)", "dest": "build/index.html" }
-    ],
-    "env": {
-      "MONGO_URL": "mongodb+srv://taushif07:FYzrGf79gm98EKc7@cluster0.bonshpl.mongodb.net/Tasks?retryWrites=true&w=majority",
-      "PUBLIC_DIR": "public",
-      "PORT": 8080
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "build", 
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" } 
     }
-  
+  ],
+  "routes": [
+    { "src": "/api/todos", "dest": "index.js" },
+    { "src": "/api/*", "dest": "index.js" },
+    { "src": "/(.*)", "dest": "build/index.html" } 
+  ],
+  "env": {
+    "MONGO_URL": "mongodb+srv://taushif07:FYzrGf79gm98EKc7@cluster0.bonshpl.mongodb.net/Tasks?retryWrites=true&w=majority",
+    "PUBLIC_DIR": "public",
+    "PORT": 8080
   }
-
+}
