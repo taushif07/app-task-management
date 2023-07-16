@@ -18,7 +18,7 @@
   ],
   "env": {
     "MONGO_URL": "mongodb+srv://taushif07:FYzrGf79gm98EKc7@cluster0.bonshpl.mongodb.net/Tasks?retryWrites=true&w=majority",
-    "PUBLIC_DIR": "public",
+    "PUBLIC_DIR": "build",
     "PORT": 8080
   }
 }
