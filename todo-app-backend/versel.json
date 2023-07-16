@@ -15,6 +15,10 @@
         "dest": "app.js"
       },
       {
+        "src": "/products/(.*)",
+        "dest": "app.js"
+      },
+      {
         "src": "/",
         "dest": "build/index.html"
       },
@@ -22,5 +26,6 @@
         "src": "/(.+)",
         "dest": "build/$1"
       }
-    ]
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "index.js" }]
   }
